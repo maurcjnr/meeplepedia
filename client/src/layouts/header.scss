@@ -1,0 +1,202 @@
+.navbar {
+  position: fixed;
+  background-color: $third-color;
+  color: $fourth-color;
+  width: 100%;
+  height: 60px;
+  border-bottom: 1px solid $second-color;
+  z-index: 1;
+
+  &__content {
+    display: flex;
+    height: 100%;
+
+    .navbar__icon {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+
+      &__image {
+        width: 38px;
+        height: 35px;
+        margin-left: 10px;
+        background-image: url("./images/m.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+
+    .navbar__left {
+      flex: 50%;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+
+      &__links {
+        max-height: 60px;
+
+        #active {
+          border-bottom: 2px solid $first-color;
+        }
+
+        &__my-account {
+          color: $first-color !important;
+
+          &:hover {
+            color: $fifth-color !important;
+          }
+        }
+
+        a {
+          text-decoration: none;
+          color: $fourth-color;
+          margin-left: 10px;
+          transition: all 0.3s;
+
+          &:hover {
+            color: $fifth-color;
+          }
+
+          @media #{$break-point-850} {
+            font-size: 0.9em;
+          }
+        }
+
+        @media #{$break-point-780} {
+          display: none;
+        }
+      }
+
+      &__button {
+        display: none;
+        margin-left: 10px;
+
+        @media #{$break-point-780} {
+          display: flex;
+        }
+      }
+
+      #hidden {
+        display: flex;
+
+        a {
+          @media #{$break-point-780} {
+            margin: 10px;
+            font-size: 1em;
+          }
+        }
+
+        @media #{$break-point-780} {
+          position: absolute;
+          left: 0;
+          top: 60px;
+          background-color: $third-color;
+          color: $fourth-color;
+          width: 100%;
+          height: 182px;
+          max-height: 182px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+
+    .navbar__right {
+      flex: 50%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-right: 10px;
+
+      @media #{$break-point-430} {
+        display: none;
+      }
+
+      input {
+        background-color: $fourth-color;
+        color: $third-color;
+        width: 210px;
+        height: 30px;
+        border: none;
+        outline: none;
+        border-radius: 30px 0 0 30px;
+        padding-left: 10px;
+      }
+
+      button {
+        background-color: $second-color;
+        color: $fourth-color;
+        width: 70px;
+        height: 32px;
+        border: none;
+        outline: none;
+        border-radius: 0 30px 30px 0;
+        transition: all 0.3s;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $fifth-color;
+        }
+      }
+    }
+
+    //burger button
+    #check {
+      position: absolute;
+      z-index: -9999;
+      top: -999px;
+    }
+
+    .btn1 {
+      width: 40px;
+      height: 25px;
+      display: block;
+      margin: auto;
+      position: relative;
+      cursor: pointer;
+
+      & > span {
+        width: 100%;
+        height: 20%;
+        background-color: $second-color;
+        display: block;
+        position: absolute;
+        border-radius: 2px;
+
+        &:nth-of-type(1) {
+          top: 0%;
+          transition: top 60ms linear 140ms, transform 60ms ease;
+        }
+
+        &:nth-of-type(2) {
+          top: 40%;
+          transition: width 1ms linear 60ms;
+        }
+
+        &:nth-of-type(3) {
+          top: 80%;
+          transition: top 60ms linear 140ms, transform 60ms ease;
+        }
+      }
+    }
+
+    #check:checked ~ label > .btn1 > span {
+      &:nth-of-type(1) {
+        top: 40%;
+        transform: rotate(45deg);
+        transition: top linear 60ms, transform 60ms ease 140ms;
+      }
+
+      &:nth-of-type(2) {
+        width: 0;
+      }
+
+      &:nth-of-type(3) {
+        top: 40%;
+        transform: rotate(-45deg);
+        transition: top linear 60ms, transform 60ms ease 140ms;
+      }
+    }
+  }
+}

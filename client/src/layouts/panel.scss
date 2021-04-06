@@ -1,0 +1,107 @@
+.panel__left {
+  @include left;
+}
+
+.panel__center {
+  @include center;
+}
+
+.panel__right {
+  @include right;
+}
+
+.admin {
+  .register {
+    margin: 10px;
+
+    .registerForm,
+    .registration,
+    .login {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h1 {
+        margin: 10px;
+        font-size: 2em;
+        color: $fourth-color;
+      }
+
+      input {
+        background-color: $fourth-color;
+        width: 300px;
+        border: none;
+        outline: none;
+        border-radius: 30px;
+        padding: 10px;
+        margin: 10px;
+        color: $third-color;
+      }
+
+      button {
+        background-color: $second-color;
+        color: $fourth-color;
+        width: 320px;
+        border: none;
+        outline: none;
+        margin: 10px;
+        border-radius: 30px;
+        padding: 10px;
+        transition: all 0.3s;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $fifth-color;
+        }
+      }
+    }
+
+    .systems {
+      text-align: center;
+
+      &__table {
+        width: 50%;
+        margin: 0 auto;
+        border: solid 1px $second-color;
+        border-bottom: none !important;
+
+        table {
+          width: 100%;
+          table-layout: fixed;
+
+          th {
+            padding: 10px 5px;
+            text-align: left;
+            color: $fourth-color;
+            text-transform: uppercase;
+            background-color: $second-color;
+          }
+
+          td {
+            padding: 5px;
+            text-align: left;
+            vertical-align: middle;
+            color: $second-color;
+            border-bottom: solid 1px $second-color;
+
+            button {
+              background-color: $second-color;
+              color: $fourth-color;
+              border: none;
+              outline: none;
+              margin: 0 10px;
+              border-radius: 30px;
+              padding: 10px;
+              transition: all 0.3s;
+              cursor: pointer;
+
+              &:hover {
+                background-color: $fifth-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

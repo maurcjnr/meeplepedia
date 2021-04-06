@@ -1,0 +1,108 @@
+@mixin button-social-media {
+  height: 48px;
+  width: 48px;
+  margin: 0 10px;
+  border-radius: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &:hover {
+    box-shadow: 0 0 10px 0 black;
+  }
+}
+
+@mixin left {
+  flex: 13.33%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+@mixin center {
+  flex: 43.33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0 40px 0;
+}
+
+@mixin right {
+  flex: 43.33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0 40px 0;
+}
+
+@mixin coming-soon {
+  .coming-soon {
+    text-align: center;
+
+    &__title {
+      font-weight: bold;
+      font-size: 1.2em;
+      color: #fff;
+    }
+
+    &__image {
+      width: 350px;
+      height: 95px;
+      margin: 20px 0 20px 0;
+      background-image: url("./images/meeplepedia.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @media #{$break-point-320} {
+        width: 300px;
+        height: 80px;
+      }
+    }
+
+    &__loader {
+      height: 50px;
+      width: 50px;
+      margin: 0 auto;
+      border: 8px solid rgba(0, 0, 0, 0.1);
+      border-left-color: #fff;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    &__social {
+      margin: 20px 0 0 0;
+      display: flex;
+      justify-content: center;
+
+      &__facebook {
+        background-image: url("./images/facebook.png");
+        @include button-social-media;
+      }
+
+      &__instagram {
+        background-image: url("./images/instagram.png");
+        @include button-social-media;
+      }
+
+      &__linkedin {
+        background-image: url("./images/linkedin.png");
+        @include button-social-media;
+      }
+
+      &__twitter {
+        background-image: url("./images/twitter.png");
+        @include button-social-media;
+      }
+    }
+
+    &__contact {
+      margin: 20px 0 0 0;
+      color: #fff;
+    }
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}

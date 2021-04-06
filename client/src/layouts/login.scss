@@ -1,0 +1,11 @@
+.login__left {
+  @include left;
+}
+
+.login__center {
+  @include center;
+}
+
+.login__right {
+  @include right;
+}

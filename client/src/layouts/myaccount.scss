@@ -1,0 +1,277 @@
+.myaccount__left {
+  @include left;
+}
+
+.myaccount__center {
+  @include center;
+
+  &__login,
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    h1 {
+      margin: 10px;
+      font-size: 1.5em;
+      color: $fourth-color;
+      text-shadow: $text-shadow;
+    }
+
+    h2 {
+      margin: 10px;
+      font-size: 0.9em;
+      color: $fourth-color;
+      text-shadow: $text-shadow;
+    }
+
+    input {
+      background-color: $fourth-color;
+      width: 340px;
+      border: none;
+      outline: none;
+      border-radius: 30px;
+      padding: 10px;
+      margin: 10px;
+      color: $third-color;
+      box-shadow: 0 2px 8px rgba($second-color, 0.5);
+    }
+
+    p {
+      margin: 10px;
+      font-size: 0.8em;
+      color: $fourth-color;
+      text-shadow: $text-shadow;
+
+      a {
+        color: $fourth-color;
+        text-decoration: none;
+
+        &:hover {
+          color: $fifth-color;
+        }
+      }
+    }
+
+    button {
+      background-color: $second-color;
+      color: $fourth-color;
+      width: 360px;
+      border: none;
+      outline: none;
+      margin: 10px;
+      border-radius: 30px;
+      padding: 10px;
+      transition: all 0.3s;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba($second-color, 0.5);
+
+      &:hover {
+        background-color: $fifth-color;
+      }
+    }
+
+    &__status {
+      display: flex;
+      color: red;
+
+      p {
+        font-size: 0.8em;
+        color: red;
+        margin: 6px 0;
+        text-shadow: $text-shadow;
+      }
+    }
+  }
+}
+
+.myaccount_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    width: 2px;
+    height: 60%;
+    background-color: $second-color;
+    box-shadow: 0 1px 5px rgba($second-color, 0.5);
+  }
+}
+
+.myaccount__right {
+  @include right;
+
+  &__register,
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    h1 {
+      margin: 10px;
+      font-size: 1.5em;
+      color: $fourth-color;
+      text-shadow: $text-shadow;
+    }
+
+    h2 {
+      margin: 10px;
+      font-size: 0.9em;
+      color: $fourth-color;
+      text-shadow: $text-shadow;
+    }
+
+    P {
+      width: 60%;
+      font-size: 0.8em;
+      color: $second-color;
+      margin: 5px 0;
+      text-shadow: $text-shadow;
+
+      a {
+        color: $sixth-color;
+      }
+    }
+
+    input {
+      background-color: $fourth-color;
+      width: 340px;
+      border: none;
+      outline: none;
+      border-radius: 30px;
+      padding: 10px;
+      margin: 10px;
+      color: $third-color;
+      box-shadow: 0 2px 8px rgba($second-color, 0.5);
+    }
+
+    .invalid-feedback {
+      display: flex;
+      width: 60%;
+      color: red;
+
+      p {
+        font-size: 0.8em;
+        color: red;
+        margin: 6px 0;
+        text-shadow: $text-shadow;
+      }
+    }
+
+    &__checkbox {
+      width: 60%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 15px 0;
+
+      &__button {
+        input {
+          display: none;
+        }
+      }
+
+      &__text {
+        font-size: 0.8em;
+        margin-left: 5px;
+        text-shadow: $text-shadow;
+      }
+    }
+
+    button {
+      background-color: $second-color;
+      color: $fourth-color;
+      width: 360px;
+      border: none;
+      outline: none;
+      margin: 10px;
+      border-radius: 30px;
+      padding: 10px;
+      transition: all 0.3s;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba($second-color, 0.5);
+
+      &:hover {
+        background-color: $fifth-color;
+      }
+    }
+    &__image {
+      width: 297px;
+      height: 80px;
+      margin: 10px;
+      background-image: url("./images/meeplepedia.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+}
+
+//Checkbox Button
+.newsletter {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 20px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transform: translate3d(0, 0, 0);
+
+  &:before {
+    content: "";
+    position: relative;
+    top: 3px;
+    left: 3px;
+    width: 34px;
+    height: 14px;
+    display: block;
+    background: $fifth-color;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+  }
+
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    display: block;
+    background: $fourth-color;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba($second-color, 0.5);
+    transition: all 0.2s ease;
+
+    &:before {
+      content: "";
+      position: absolute;
+      display: block;
+      margin: -18px;
+      width: 56px;
+      height: 56px;
+      background: rgba($second-color, 0.5);
+      border-radius: 50%;
+      transform: scale(0);
+      opacity: 1;
+      pointer-events: none;
+    }
+  }
+}
+
+#newsletter:checked + .newsletter:before {
+  background: $third-color;
+}
+
+#newsletter:checked + .newsletter span {
+  background: $second-color;
+  transform: translateX(20px);
+  transition: all 0.2s cubic-bezier(0.8, 0.4, 0.3, 1.25), background 0.15s ease;
+  box-shadow: 0 3px 8px rgba($second-color, 0.5);
+}
+
+#newsletter:checked + .newsletter span:before {
+  transform: scale(1);
+  opacity: 0;
+  transition: all 0.4s ease;
+}

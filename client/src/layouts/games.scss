@@ -1,0 +1,92 @@
+.games__left {
+  @include left;
+}
+
+.games__center {
+  flex: 66.66%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.games__right {
+  flex: 20%;
+  display: flex;
+  justify-content: flex-end;
+
+  .hotness {
+    width: 100%;
+    background-color: $second-color;
+
+    &__title {
+      text-align: center;
+      background-color: $third-color;
+      color: $fourth-color;
+      padding: 10px;
+      font-size: 0.8em;
+      font-weight: bold;
+    }
+
+    &__itens {
+      font-size: 0.7em;
+      color: $fourth-color;
+
+      &__pagination-buttons {
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        outline: none;
+
+        a {
+          margin: 0 6px;
+          border: none;
+          outline: none;
+          border-radius: 5px;
+          color: $fourth-color;
+          cursor: pointer;
+
+          &:hover {
+            color: $first-color;
+          }
+        }
+      }
+
+      &__pagination-active {
+        a {
+          color: $first-color;
+        }
+      }
+
+      &__item {
+        display: flex;
+        border-bottom: 1px solid $third-color;
+        justify-content: flex-end;
+        padding: 5px 5px 5px 0;
+
+        &:nth-last-child(-n + 2) {
+          border-bottom: none;
+        }
+
+        &__image {
+          img {
+            width: 45px;
+          }
+        }
+
+        &__content {
+          margin: 0 0 0 10px;
+          padding: 5px 5px 0 0;
+          height: 65px;
+          text-align: right;
+
+          p:last-child {
+            margin: 5px 0 0 0;
+            color: $fifth-color;
+          }
+        }
+      }
+    }
+  }
+}

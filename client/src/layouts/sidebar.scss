@@ -1,0 +1,49 @@
+.sidebar {
+  width: 100%;
+  height: 100%;
+  background-color: $third-color;
+
+  &__list {
+    width: 100%;
+    height: auto;
+
+    #active {
+      background-color: $second-color;
+    }
+
+    &__row {
+      width: 100%;
+      height: 50px;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      color: $fourth-color;
+      border-bottom: 1px solid $second-color;
+      list-style-type: none;
+      cursor: pointer;
+      transition: all 0.3s;
+
+      #icon {
+        flex: 30%;
+        display: grid;
+        place-items: center;
+      }
+
+      #title {
+        flex: 70%;
+        display: grid;
+        place-items: center start;
+      }
+
+      &:hover {
+        background-color: $second-color;
+      }
+
+      &:last-child {
+        color: $first-color;
+      }
+    }
+  }
+}

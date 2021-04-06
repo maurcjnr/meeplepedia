@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: $fifth-color;
+  font-family: $comfortaa;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $fourth-color;
+  }
+
+  &::-webkit-scrollbar-track-piece {
+    background-color: $second-color;
+  }
+}
+
+.home,
+.about,
+.contact,
+.support,
+.login,
+.games,
+.ranking,
+.posts,
+.events,
+.groups,
+.donation {
+  width: 100%;
+  height: 100%;
+
+  .content {
+    display: flex;
+    max-width: 1280px;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 60px;
+    background-color: $first-color;
+  }
+}
+
+.home__left {
+  @include left;
+}
+
+.home__center {
+  flex: 86.66%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0 40px 0;
+  height: 100vh;
+}

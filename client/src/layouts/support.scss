@@ -1,0 +1,12 @@
+.support__left {
+  @include left;
+}
+
+.support__center {
+  flex: 86.66%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0 40px 0;
+  height: 100vh;
+}

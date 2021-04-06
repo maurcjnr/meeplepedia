@@ -1,0 +1,28 @@
+// Helpers
+@import "helpers/mixins";
+@import "helpers/placeholders";
+@import "helpers/reset";
+@import "helpers/variables";
+
+// Layouts
+@import "layouts/temp.scss";
+
+@import "layouts/home.scss";
+@import "layouts/about.scss";
+@import "layouts/contact.scss";
+@import "layouts/support.scss";
+@import "layouts/login.scss";
+@import "layouts/myaccount.scss";
+@import "layouts/panel.scss";
+
+@import "layouts/games.scss";
+@import "layouts/ranking.scss";
+@import "layouts/posts.scss";
+@import "layouts/posts-panel.scss";
+@import "layouts/events.scss";
+@import "layouts/groups.scss";
+@import "layouts/donation.scss";
+
+@import "layouts/header.scss";
+@import "layouts/footer.scss";
+@import "layouts/sidebar.scss";

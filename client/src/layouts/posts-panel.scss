@@ -1,0 +1,12 @@
+.posts-panel__left {
+    @include left;
+  }
+  
+  .posts-panel__center {
+    @include center;
+  }
+  
+  .posts-panel__right {
+    @include right;
+  }
+  
